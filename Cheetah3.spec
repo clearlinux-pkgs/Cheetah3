@@ -4,7 +4,7 @@
 #
 Name     : Cheetah3
 Version  : 3.2.3
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/3e/16/c711180492c9f40fb64dffb436fe1b91e3031637b478edb8de3c4b74097a/Cheetah3-3.2.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3e/16/c711180492c9f40fb64dffb436fe1b91e3031637b478edb8de3c4b74097a/Cheetah3-3.2.3.tar.gz
 Summary  : Cheetah is a template engine and code generation tool
