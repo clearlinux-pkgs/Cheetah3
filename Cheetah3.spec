@@ -4,7 +4,7 @@
 #
 Name     : Cheetah3
 Version  : 3.2.4
-Release  : 5
+Release  : 6
 URL      : https://files.pythonhosted.org/packages/4e/72/e6a7d92279e3551db1b68fd336fd7a6e3d2f2ec742bf486486e6150d77d2/Cheetah3-3.2.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4e/72/e6a7d92279e3551db1b68fd336fd7a6e3d2f2ec742bf486486e6150d77d2/Cheetah3-3.2.4.tar.gz
 Summary  : Cheetah is a template engine and code generation tool
@@ -22,9 +22,29 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-Cheetah Template 3.2.4
-======================
 Cheetah3 is a free and open source template engine and code generation tool.
+
+It can be used standalone or combined with other tools and frameworks. Web
+development is its principle use, but Cheetah is very flexible and
+is also being used to generate C++ game code, Java, sql, form emails
+and even Python code.
+
+It's a fork of the original CheetahTemplate library.
+
+Documentation
+================================================================================
+For a high-level introduction to Cheetah please refer to the User's Guide
+at https://cheetahtemplate.org/users_guide/index.html
+
+Credits
+================================================================================
+https://cheetahtemplate.org/authors.html
+
+https://github.com/CheetahTemplate3/cheetah3/blob/master/LICENSE
+
+Recent Changes
+================================================================================
+See https://cheetahtemplate.org/news.html for full details
 
 %package bin
 Summary: bin components for the Cheetah3 package.
@@ -57,6 +77,7 @@ python components for the Cheetah3 package.
 Summary: python3 components for the Cheetah3 package.
 Group: Default
 Requires: python3-core
+Provides: pypi(Cheetah3)
 
 %description python3
 python3 components for the Cheetah3 package.
@@ -64,13 +85,14 @@ python3 components for the Cheetah3 package.
 
 %prep
 %setup -q -n Cheetah3-3.2.4
+cd %{_builddir}/Cheetah3-3.2.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570908718
+export SOURCE_DATE_EPOCH=1582907073
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -87,7 +109,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Cheetah3
-cp LICENSE %{buildroot}/usr/share/package-licenses/Cheetah3/LICENSE
+cp %{_builddir}/Cheetah3-3.2.4/LICENSE %{buildroot}/usr/share/package-licenses/Cheetah3/a7186cce21fd72616b0fde6964715d4c16ea0c19
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -104,7 +126,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/Cheetah3/LICENSE
+/usr/share/package-licenses/Cheetah3/a7186cce21fd72616b0fde6964715d4c16ea0c19
 
 %files python
 %defattr(-,root,root,-)
