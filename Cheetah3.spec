@@ -4,7 +4,7 @@
 #
 Name     : Cheetah3
 Version  : 3.2.4
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/4e/72/e6a7d92279e3551db1b68fd336fd7a6e3d2f2ec742bf486486e6150d77d2/Cheetah3-3.2.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4e/72/e6a7d92279e3551db1b68fd336fd7a6e3d2f2ec742bf486486e6150d77d2/Cheetah3-3.2.4.tar.gz
 Summary  : Cheetah is a template engine and code generation tool
@@ -22,29 +22,16 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-Cheetah3 is a free and open source template engine and code generation tool.
-
 It can be used standalone or combined with other tools and frameworks. Web
-development is its principle use, but Cheetah is very flexible and
-is also being used to generate C++ game code, Java, sql, form emails
-and even Python code.
-
-It's a fork of the original CheetahTemplate library.
-
-Documentation
-================================================================================
-For a high-level introduction to Cheetah please refer to the User's Guide
-at https://cheetahtemplate.org/users_guide/index.html
-
-Credits
-================================================================================
-https://cheetahtemplate.org/authors.html
-
-https://github.com/CheetahTemplate3/cheetah3/blob/master/LICENSE
-
-Recent Changes
-================================================================================
-See https://cheetahtemplate.org/news.html for full details
+        development is its principle use, but Cheetah is very flexible and
+        is also being used to generate C++ game code, Java, sql, form emails
+        and even Python code.
+        
+        It's a fork of the original CheetahTemplate library.
+        
+        Documentation
+        ================================================================================
+        For a high-level introduction to Cheetah please refer to the User's Guide
 
 %package bin
 Summary: bin components for the Cheetah3 package.
@@ -77,7 +64,7 @@ python components for the Cheetah3 package.
 Summary: python3 components for the Cheetah3 package.
 Group: Default
 Requires: python3-core
-Provides: pypi(Cheetah3)
+Provides: pypi(cheetah3)
 
 %description python3
 python3 components for the Cheetah3 package.
@@ -92,8 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582907073
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583517437
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
