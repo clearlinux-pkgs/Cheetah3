@@ -1,5 +1,5 @@
 PKG_NAME := Cheetah3
-URL = https://files.pythonhosted.org/packages/ee/6f/29c6d74d8536dede06815eeaebfad53699e3f3df0fb22b7a9801a893b426/Cheetah3-3.2.6.tar.gz
+URL = https://files.pythonhosted.org/packages/23/33/ace0250068afca106c1df34348ab0728e575dc9c61928d216de3e381c460/Cheetah3-3.2.6.post1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
